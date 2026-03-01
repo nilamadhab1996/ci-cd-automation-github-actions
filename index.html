@@ -3,82 +3,179 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Nilamadhab Purohit | SRE | DevOps</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Nilamadhab Purohit | DevOps | SRE</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter, sans-serif}
 
 body{
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-color:#fff;overflow-x:hidden
+background:#050816;
+color:white;
+overflow-x:hidden
 }
 
-/* animated blobs */
-body::before,body::after{
-content:"";position:fixed;width:450px;height:450px;border-radius:50%;
-filter:blur(120px);opacity:.7;z-index:-1;animation:float 12s infinite alternate
-}
-body::before{background:#00c6ff;top:-100px;left:-120px}
-body::after{background:#ff00c8;bottom:-100px;right:-120px}
-@keyframes float{to{transform:translateY(60px)}}
-
-header{display:flex;justify-content:space-between;align-items:center;width:90%;max-width:1200px;margin:auto;padding:20px 0}
-
-nav a{color:#fff;text-decoration:none;margin-left:25px;position:relative}
-nav a::after{content:"";height:2px;width:0;background:#00c6ff;position:absolute;bottom:-5px;left:0;transition:.3s}
-nav a:hover::after{width:100%}
-
-.glass{background:rgba(255,255,255,.08);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.2);border-radius:20px}
-
-.hero{width:90%;max-width:1200px;margin:40px auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:50px}
-
-.hero img{width:100%;border-radius:20px;transition:.5s}
-.hero img:hover{transform:scale(1.05)}
-
-h1{font-size:3rem;margin-bottom:10px}
-h1 span{background:linear-gradient(90deg,#00c6ff,#ff00c8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-
-.subtitle{color:#ddd;margin-bottom:20px;line-height:1.7}
-
-.btn{display:inline-block;padding:12px 26px;border-radius:30px;text-decoration:none;margin-right:10px;transition:.3s}
-.primary{background:linear-gradient(90deg,#00c6ff,#ff00c8)}
-.primary:hover{box-shadow:0 0 20px #00c6ff;transform:scale(1.05)}
-.secondary{border:1px solid rgba(255,255,255,.3)}
-
-section{width:90%;max-width:1200px;margin:40px auto}
-.card{padding:30px;margin-top:20px;transition:.4s}
-.card:hover{transform:translateY(-8px);box-shadow:0 0 40px rgba(0,198,255,.4)}
-
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:15px;margin-top:20px}
-.skill{background:rgba(255,255,255,.07);padding:12px;text-align:center;border-radius:10px}
-.skill:hover{background:linear-gradient(90deg,#00c6ff,#ff00c8);transform:scale(1.08)}
-
-.timeline{border-left:2px solid rgba(255,255,255,.3);padding-left:20px;margin-top:20px}
-.timeline div{margin-bottom:25px}
-
-/* DevOps animation */
-.devops{
-position:relative;height:160px;margin-top:20px
-}
-.circle{
-position:absolute;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;background:rgba(255,255,255,.1)
-}
-.circle:nth-child(1){top:0;left:40%;animation:orbit 8s linear infinite}
-.circle:nth-child(2){bottom:0;left:10%;animation:orbit 10s linear infinite}
-.circle:nth-child(3){bottom:0;right:10%;animation:orbit 12s linear infinite}
-.circle:nth-child(4){top:0;right:40%;animation:orbit 9s linear infinite}
-
-@keyframes orbit{
-0%{transform:rotate(0deg) translateX(60px) rotate(0deg)}
-100%{transform:rotate(360deg) translateX(60px) rotate(-360deg)}
+/* premium animated gradient */
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:radial-gradient(circle at 20% 30%,#00c6ff33,transparent 40%),
+radial-gradient(circle at 80% 70%,#ff00c833,transparent 40%);
+z-index:-1;
 }
 
-footer{text-align:center;margin:40px;color:#aaa}
+header{
+position:fixed;
+top:0;
+width:100%;
+padding:18px 8%;
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,.08);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav a{
+color:#ccc;
+text-decoration:none;
+margin-left:28px;
+font-weight:500;
+transition:.3s;
+}
+nav a:hover{color:#fff}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:120px 8% 40px;
+}
+
+.left{max-width:600px}
+
+h1{
+font-size:3.6rem;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.gradient{
+background:linear-gradient(90deg,#00c6ff,#ff00c8);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+color:#aaa;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+.btn{
+padding:14px 32px;
+border-radius:40px;
+border:none;
+font-weight:600;
+cursor:pointer;
+margin-right:14px;
+transition:.3s;
+}
+
+.primary{
+background:linear-gradient(90deg,#00c6ff,#ff00c8);
+}
+
+.primary:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 40px #00c6ff55;
+}
+
+.secondary{
+background:transparent;
+border:1px solid #ffffff30;
+color:#fff;
+}
+
+/* glowing profile */
+.profile{
+position:relative;
+}
+
+.profile img{
+width:340px;
+border-radius:20px;
+position:relative;
+z-index:2;
+}
+
+.profile::before{
+content:"";
+position:absolute;
+inset:-10px;
+background:linear-gradient(120deg,#00c6ff,#ff00c8);
+filter:blur(40px);
+opacity:.6;
+border-radius:30px;
+}
+
+/* DevOps animated section */
+.stack{
+margin-top:50px;
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
+.tag{
+padding:10px 16px;
+border-radius:30px;
+background:#0e1327;
+border:1px solid #ffffff20;
+transition:.3s;
+}
+
+.tag:hover{
+background:linear-gradient(90deg,#00c6ff,#ff00c8);
+transform:translateY(-3px);
+}
+
+/* experience */
+section{
+padding:80px 8%;
+}
+
+h2{
+font-size:2.3rem;
+margin-bottom:30px;
+}
+
+.card{
+background:#0e1327;
+padding:28px;
+border-radius:16px;
+margin-bottom:20px;
+border:1px solid #ffffff10;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border:1px solid #00c6ff;
+}
+
+footer{
+padding:40px 0;
+text-align:center;
+color:#777;
+}
 
 @media(max-width:900px){
-.hero{grid-template-columns:1fr}
-h1{font-size:2.2rem}
+.hero{flex-direction:column;text-align:center}
+h1{font-size:2.4rem}
+.profile img{width:260px;margin-top:40px}
 }
 </style>
 </head>
@@ -86,106 +183,83 @@ h1{font-size:2.2rem}
 <body>
 
 <header>
-<h2>Nil.</h2>
+<h3>Nilamadhab</h3>
 <nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
+<a href="#">Home</a>
+<a href="#exp">Experience</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
-<section class="hero glass" id="about">
+<div class="hero">
 
-<div>
-<h1>Hi, I'm <span>Nilamadhab Purohit</span></h1>
+<div class="left">
+<h1>
+Building <span class="gradient">Reliable Systems</span><br>
+DevOps & SRE Engineer
+</h1>
+
 <p class="subtitle">
-Senior Implementation Engineer, DevOps & Site Reliability Engineer with 6+ years of experience across Fintech, BFSI and Telecom. I specialize in Kubernetes, Linux, automation, observability and production reliability.
+Senior Implementation Engineer at Zeta with 6+ years of experience across Razorpay, OnMobile and Banking platforms. I specialize in Kubernetes, Linux, automation, observability and high-scale production systems.
 </p>
 
-<a class="btn primary" href="https://www.linkedin.com/in/nilamadhabpurohit/" target="_blank">LinkedIn</a>
-<a class="btn secondary" href="#contact">Contact</a>
+<button class="btn primary" onclick="window.open('https://www.linkedin.com/in/nilamadhabpurohit/')">LinkedIn</button>
+<button class="btn secondary">Download Resume</button>
 
-<div class="card glass">
-<h3>What I Do</h3>
-<p>
-I work on production systems, incident management, Kubernetes debugging, automation, observability, data migration and cloud deployments. I collaborate closely with SRE, Product and Engineering teams to improve platform stability.
-</p>
-</div>
-
-<div class="devops">
-<div class="circle">Linux</div>
-<div class="circle">K8s</div>
-<div class="circle">Cloud</div>
-<div class="circle">CI/CD</div>
+<div class="stack">
+<div class="tag">Kubernetes</div>
+<div class="tag">Linux</div>
+<div class="tag">AWS</div>
+<div class="tag">Terraform</div>
+<div class="tag">Python</div>
+<div class="tag">CI/CD</div>
+<div class="tag">Observability</div>
+<div class="tag">PostgreSQL</div>
 </div>
 
 </div>
 
-<div>
-<img src="profile.jpg" alt="Nilamadhab">
-
-<div class="card glass" id="skills">
-<h3>Core Skills</h3>
-<div class="skills">
-<div class="skill">Kubernetes</div>
-<div class="skill">Docker</div>
-<div class="skill">AWS</div>
-<div class="skill">Linux</div>
-<div class="skill">Python</div>
-<div class="skill">Shell</div>
-<div class="skill">Terraform</div>
-<div class="skill">PostgreSQL</div>
-<div class="skill">Grafana</div>
-<div class="skill">Splunk</div>
-<div class="skill">CI/CD</div>
-<div class="skill">GitOps</div>
-</div>
+<div class="profile">
+<img src="/mnt/data/Image (6).jpeg" alt="Nilamadhab">
 </div>
 
 </div>
-</section>
 
-<section id="experience">
-<div class="card glass">
+<section id="exp">
 <h2>Experience</h2>
 
-<div class="timeline">
-<div>
-<h4>Zeta – Sr Implementation Engineer</h4>
-<p>Kubernetes troubleshooting, CRD debugging, Jenkins pipelines, automation, rollout validation and platform onboarding.</p>
+<div class="card">
+<h3>Zeta – Sr Implementation Engineer</h3>
+<p>Kubernetes CRD debugging, Jenkins pipelines, Day‑0/Day‑1 rollout, automation and reliability improvements.</p>
 </div>
 
-<div>
-<h4>Razorpay – Product Support Engineer</h4>
-<p>Handled high scale distributed payments, PostgreSQL tuning, API debugging, incident RCA and reliability improvements.</p>
+<div class="card">
+<h3>Razorpay – Product Support Engineer</h3>
+<p>Handled high-scale distributed payment systems, PostgreSQL tuning, incident RCA and API debugging.</p>
 </div>
 
-<div>
-<h4>OnMobile – Product Support Engineer</h4>
-<p>Cloud migration, ETL optimization, database scaling and telecom analytics workloads.</p>
+<div class="card">
+<h3>OnMobile – Product Support Engineer</h3>
+<p>Cloud migration, ETL optimization and database scalability.</p>
 </div>
 
-<div>
-<h4>Kotak Bank Project</h4>
-<p>Banking platform support, deployments and production stability.</p>
-</div>
+<div class="card">
+<h3>Kotak Bank</h3>
+<p>Production support, deployment and system stability.</p>
 </div>
 
-</div>
 </section>
 
 <section id="contact">
-<div class="card glass">
 <h2>Contact</h2>
+<div class="card">
 <p>Email: nilamadhabpurohit@outlook.com</p>
 <p>Bangalore, India</p>
-<a href="https://github.com/">GitHub</a>
 </div>
 </section>
 
 <footer>
-© 2026 Nilamadhab Purohit | SRE | DevOps
+© 2026 Nilamadhab Purohit | DevOps & SRE
 </footer>
 
 </body>
