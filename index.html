@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nilamadhab Purohit | DevOps | SRE</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+    body {
+      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:white;
+    }
+
+    /* Background blobs */
+    body::before, body::after{
+      content:"";
+      position:fixed;
+      width:420px;height:420px;
+      border-radius:50%;
+      filter:blur(120px);
+      z-index:-1;
+      opacity:.7;
+      animation:float 12s infinite alternate ease-in-out;
+    }
+
+    body::before{background:#00c6ff;top:-120px;left:-120px}
+    body::after{background:#ff00c8;bottom:-120px;right:-120px}
+
+    @keyframes float{from{transform:translateY(0)}to{transform:translateY(60px)}}
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      width:90%;max-width:1200px;margin:auto;
+      padding:20px 0;
+    }
+
+    nav a{
+      color:white;text-decoration:none;margin-left:25px;
+      position:relative;font-weight:500;
+    }
+
+    nav a::after{
+      content:"";
+      height:2px;width:0;background:#00c6ff;
+      position:absolute;left:0;bottom:-5px;transition:.3s
+    }
+
+    nav a:hover::after{width:100%}
+
+    .glass{
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(14px);
+      border:1px solid rgba(255,255,255,0.2);
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+
+    .hero{
+      width:90%;max-width:1200px;margin:40px auto;
+      display:grid;grid-template-columns:1fr 1fr;
+      gap:40px;padding:60px;
+      transition:.4s;
+    }
+
+    .hero:hover{transform:translateY(-8px) scale(1.01)}
+
+    h1{font-size:3rem;margin-bottom:12px}
+
+    h1 span{
+      background:linear-gradient(90deg,#00c6ff,#ff00c8);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .subtitle{color:#ddd;margin-bottom:25px;line-height:1.7}
+
+    .btn{
+      display:inline-block;padding:12px 28px;border-radius:30px;
+      text-decoration:none;margin-right:12px;font-weight:500;
+      transition:.3s;
+    }
+
+    .primary{background:linear-gradient(90deg,#00c6ff,#ff00c8)}
+    .primary:hover{transform:scale(1.05);box-shadow:0 0 20px #00c6ff}
+
+    .secondary{border:1px solid rgba(255,255,255,.3)}
+
+    section{width:90%;max-width:1200px;margin:30px auto}
+
+    .card{padding:30px;margin-top:20px;transition:.4s}
+
+    .card:hover{transform:translateY(-8px);box-shadow:0 0 40px rgba(0,198,255,.4)}
+
+    .skills{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+      gap:15px;margin-top:20px
+    }
+
+    .skill{
+      text-align:center;padding:12px;border-radius:12px;
+      background:rgba(255,255,255,.07);
+      transition:.3s
+    }
+
+    .skill:hover{background:linear-gradient(90deg,#00c6ff,#ff00c8);transform:scale(1.08)}
+
+    .timeline{border-left:2px solid rgba(255,255,255,.3);padding-left:20px;margin-top:20px}
+
+    .timeline div{margin-bottom:20px}
+
+    .contact a{color:white;text-decoration:none;display:block;margin-top:8px}
+
+    footer{text-align:center;margin:40px 0;color:#aaa}
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;padding:40px}
+      h1{font-size:2.2rem}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h2>Nil.</h2>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero glass" id="about">
+  <div>
+    <h1>Hi, I'm <span>Nilamadhab</span></h1>
+    <p class="subtitle">
+      DevOps Engineer and Site Reliability Engineer with strong experience in cloud infrastructure,
+      automation, Kubernetes, and production systems. I focus on reliability, scalability, and
+      performance for modern distributed platforms.
+    </p>
+
+    <a class="btn primary" href="https://www.linkedin.com/in/nilamadhabpurohit/" target="_blank">LinkedIn</a>
+    <a class="btn secondary" href="#contact">Contact</a>
+
+    <div class="card glass">
+      <h3>Professional Summary</h3>
+      <p>
+        Experienced in incident management, automation, Linux, CI/CD pipelines, and cloud platforms.
+        Passionate about solving complex production issues and improving system resilience.
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <div class="card glass">
+      <h3>Core Competencies</h3>
+      <div class="skills">
+        <div class="skill">AWS</div>
+        <div class="skill">Kubernetes</div>
+        <div class="skill">Docker</div>
+        <div class="skill">Python</div>
+        <div class="skill">Shell</div>
+        <div class="skill">Linux</div>
+        <div class="skill">CI/CD</div>
+        <div class="skill">Monitoring</div>
+        <div class="skill">ETL</div>
+        <div class="skill">Data Migration</div>
+      </div>
+    </div>
+
+    <div class="card glass">
+      <h3>Career Focus</h3>
+      <p>
+        Preparing for advanced DevOps, SRE, and Cloud roles with a focus on automation,
+        reliability engineering, and scalable architectures.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="card glass">
+    <h2>Experience</h2>
+
+    <div class="timeline">
+      <div>
+        <h4>Product Support Engineer – Razorpay</h4>
+        <p>Owned end-to-end incident response for distributed payment systems and improved system stability.</p>
+      </div>
+
+      <div>
+        <h4>Technical Support / SaaS Platforms</h4>
+        <p>Worked on customer onboarding, troubleshooting, monitoring, and cloud infrastructure.</p>
+      </div>
+
+      <div>
+        <h4>Production Support & Automation</h4>
+        <p>Built scripts and workflows for system monitoring, data migrations, and performance improvements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="card glass contact">
+    <h2>Contact</h2>
+    <p>Let's collaborate or discuss DevOps, SRE, or Cloud opportunities.</p>
+
+    <a href="mailto:nil@example.com">Email</a>
+    <a href="https://github.com/">GitHub</a>
+    <a href="https://www.linkedin.com/in/nilamadhabpurohit/">LinkedIn</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Nilamadhab Purohit | DevOps & SRE
+</footer>
+
+</body>
+</html>
