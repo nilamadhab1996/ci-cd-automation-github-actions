@@ -1,0 +1,71 @@
+# Workflow name
+name: Build Test Deploy
+
+# Trigger options
+on:
+  # Run on push to main branch
+  push:
+    branches:
+      - main
+
+  # Manual trigger with environment selection
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Select deployment environment"
+        required: true
+        type: choice
+        options:
+          - dev
+          - test
+          - staging
+          - prod
+
+jobs:
+  # ---------------- BUILD ----------------
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build application
+        run: |
+          echo "Building the application..."
+          # Example: npm install or mvn clean package
+
+  # ---------------- TEST ----------------
+  test:
+    needs: build   # Test will run only after build is successful
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run tests
+        run: |
+          echo "Running unit and integration tests..."
+          # Example: pytest or npm test
+
+  # ---------------- DEPLOY ----------------
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show selected environment
+        run: |
+          echo "Deploying to ${{ github.event.inputs.environment }} environment"
+
+      - name: Deploy application
+        run: |
+          if [ "${{ github.event.inputs.environment }}" == "dev" ]; then
+            echo "Deploying to DEV..."
+          elif [ "${{ github.event.inputs.environment }}" == "test" ]; then
+            echo "Deploying to TEST..."
+          elif [ "${{ github.event.inputs.environment }}" == "staging" ]; then
+            echo "Deploying to STAGING..."
+          elif [ "${{ github.event.inputs.environment }}" == "prod" ]; then
+            echo "Deploying to PROD..."
+          else
+            echo "No environment selected"
+          fi
