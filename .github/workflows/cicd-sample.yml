@@ -1,0 +1,39 @@
+# Name of the workflow (this will be visible in GitHub Actions UI)
+name: Basic CI
+
+# Define when the workflow should run
+on:
+  # Trigger when code is pushed to the main branch
+  push:
+    branches:
+      - main
+
+  # Trigger when a pull request is created or updated
+  pull_request:
+
+  # Allow manual execution from GitHub UI
+  workflow_dispatch:
+
+# Jobs section (a workflow can have multiple jobs)
+jobs:
+  # Job name
+  build:
+    # Runner environment (virtual machine provided by GitHub)
+    runs-on: ubuntu-latest
+
+    # Steps inside the job
+    steps:
+      # Step 1: Checkout the repository code to the runner
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2: Run a simple command
+      - name: Run a simple command
+        run: echo "CI pipeline is running successfully"
+
+      # Step 3: Display system information (useful for debugging)
+      - name: Check system info
+        run: |
+          uname -a
+          pwd
+          ls -l
